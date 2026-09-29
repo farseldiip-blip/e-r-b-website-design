@@ -1,0 +1,7 @@
+import Link from 'next/link'
+import { ArrowLeft, ArrowUpRight, Phone } from 'lucide-react'
+import { contact, logo, menuSections } from '@/lib/site-data'
+
+const sections = menuSections
+
+export default function MenuPage() { return <main className="menu-page"><header className="menu-page-header"><Link href="/" className="brand-lockup"><img src={logo} alt="E.R.B logo" /><span>European Roastery &amp; Bakery</span></Link><Link className="back-link" href="/"><ArrowLeft /> Back home</Link><a className="header-order" href={contact.phoneHref}>Call / delivery <Phone /></a></header><section className="menu-intro-page"><p className="section-kicker">E.R.B / Alexandria</p><h1>Our <em>menu.</em></h1><p>Fresh coffee, breakfast and bakery. Ask our team what came out of the oven today.</p></section><div className="menu-page-list">{sections.map((section, index) => <section className="menu-category" key={section.title}><div className="category-heading"><span>0{index + 1}</span><h2>{section.title}</h2></div><div className="category-items">{section.items.map(([name, note, price]) => <article key={name}><div><h3>{name}</h3><p>{note}</p></div><strong>{price}</strong></article>)}</div></section>)}</div><section className="menu-footer-cta"><p className="section-kicker">Come by</p><h2>See you at<br /><em>E.R.B.</em></h2><Link className="solid-link" href="/#visit">Visit us <ArrowUpRight /></Link></section></main> }
