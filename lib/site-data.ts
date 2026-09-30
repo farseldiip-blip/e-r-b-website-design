@@ -1,10 +1,19 @@
-export type HeroSlide = { image: string; alt: string; label: string }
+export type HeroSlide = {
+  image: string
+  alt: string
+  label: string
+  /** intrinsic size, used to reserve the box before the bytes land */
+  width: number
+  height: number
+  /** object-position applied to the mobile hero only (see .hero-slide in globals.css) */
+  position: string
+}
 
 export const heroSlides: HeroSlide[] = [
-  { image: '/images/erb-hero.png', alt: 'Cappuccino and fresh croissant on a sunny cafe table', label: 'Coffee, pastry and a little pause.' },
-  { image: '/images/erb-bakery.png', alt: 'Fresh almond croissants on a bakery counter', label: 'Baked warm every morning.' },
-  { image: '/images/erb-cafe.png', alt: 'Sunlit interior of the E.R.B cafe', label: 'A good place to stay awhile.' },
-  { image: '/images/erb-hero.png', alt: 'Fresh coffee served at E.R.B', label: 'Roasted in-house, served with care.' },
+  { image: '/images/erb-hero.png', alt: 'Cappuccino and fresh croissant on a sunny cafe table', label: 'Coffee, pastry and a little pause.', width: 768, height: 1376, position: 'center 50%' },
+  { image: '/images/erb-bakery.png', alt: 'Fresh almond croissants on a bakery counter', label: 'Baked warm every morning.', width: 1408, height: 768, position: '36% center' },
+  { image: '/images/erb-cafe.png', alt: 'Sunlit interior of the E.R.B cafe', label: 'A good place to stay awhile.', width: 1408, height: 768, position: '42% center' },
+  { image: '/images/erb-hero.png', alt: 'Fresh coffee served at E.R.B', label: 'Roasted in-house, served with care.', width: 768, height: 1376, position: 'center 50%' },
 ]
 
 export const instagramImages = [

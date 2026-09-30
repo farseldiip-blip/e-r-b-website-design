@@ -29,5 +29,22 @@
     "postcss": "^8.5",
     "tailwindcss": "^4.3.3",
     "typescript": "5.7.3"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farseldiip-blip/e-r-b-website-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/farseldiip-blip/e-r-b-website-design/issues"
+  },
+  "homepage": "https://github.com/farseldiip-blip/e-r-b-website-design#readme"
 }
